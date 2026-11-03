@@ -1,0 +1,49 @@
+import React from 'react';
+
+export interface KalonLogoProps extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  className?: string;
+  title?: string;
+}
+
+/**
+ * KALON Brand Monogram Vector Icon
+ *
+ * Vector representation of the official KALON interlocking monogram.
+ * Behave identically to an icon font or SVG glyph (Lucide style):
+ * - Scales to any resolution with zero pixelation or blur
+ * - Inherits color via `currentColor` (supports Tailwind `text-*` classes)
+ * - Sharp rendering at any size (16px to 512px+)
+ */
+export const KalonLogo: React.FC<KalonLogoProps> = ({
+  size,
+  className = 'w-6 h-6',
+  title = 'KALON Monograma',
+  style,
+  ...props
+}) => {
+  const customStyle: React.CSSProperties = {
+    ...style,
+    ...(size ? { width: typeof size === 'number' ? `${size}px` : size, height: typeof size === 'number' ? `${size}px` : size } : {}),
+  };
+
+  return (
+    <svg
+      viewBox="0 0 1024 1024"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label={title}
+      className={`inline-block shrink-0 transition-colors select-none ${className}`}
+      style={customStyle}
+      {...props}
+    >
+      <title>{title}</title>
+      <g transform="translate(0, 1024) scale(0.1, -0.1)" fill="currentColor" stroke="none">
+        <path d="M640 9542 c-17 -6 -12 -128 5 -146 16 -15 28 -17 195 -36 220 -25 414 -93 494 -173 73 -74 115 -196 137 -402 8 -79 13 -681 16 -2130 5 -2095 -1 -2606 -32 -2718 -71 -266 -254 -380 -670 -417 -71 -7 -136 -17 -142 -22 -19 -15 -17 -122 2 -138 20 -17 2692 -5 2712 12 8 6 13 35 13 74 0 76 -10 84 -96 84 -165 0 -433 69 -543 140 -149 97 -199 199 -221 455 -6 71 -10 498 -10 1042 l0 922 143 115 c78 64 147 116 152 116 15 0 435 -427 816 -830 1613 -1706 1704 -1793 2140 -2024 l100 -53 -68 -50 c-196 -143 -564 -501 -1505 -1468 -484 -497 -679 -689 -823 -812 -202 -172 -497 -294 -803 -332 -40 -5 -79 -15 -87 -21 -17 -14 -21 -116 -5 -140 8 -13 188 -15 1500 -18 1481 -2 1490 -2 1510 18 15 15 20 33 20 70 0 72 -21 90 -105 90 -150 0 -364 44 -466 95 -267 136 -100 411 850 1400 425 442 874 864 1050 987 37 26 88 52 112 57 24 6 149 11 277 11 l232 0 0 -927 c0 -891 -5 -1080 -31 -1198 -30 -133 -130 -265 -246 -324 -111 -56 -327 -101 -484 -101 -61 0 -79 -4 -92 -18 -21 -23 -23 -110 -3 -138 14 -19 41 -19 1363 -22 1091 -2 1351 0 1365 10 11 8 20 33 24 68 9 84 0 91 -132 101 -369 29 -571 118 -681 301 -39 63 -59 140 -73 268 -13 124 -13 4459 0 4625 28 363 123 495 430 595 110 36 291 70 371 70 77 0 89 13 89 94 0 39 -5 68 -13 74 -9 8 -375 8 -1227 1 -668 -5 -1279 -6 -1357 -3 -108 5 -146 4 -158 -6 -20 -16 -21 -132 -2 -149 8 -6 61 -16 118 -21 140 -14 299 -44 387 -74 232 -79 313 -198 342 -501 6 -68 10 -563 10 -1292 l0 -1183 -32 0 c-18 0 -91 9 -162 20 -389 60 -575 133 -849 332 -226 163 -462 396 -1248 1228 -194 206 -410 434 -479 505 -69 72 -255 267 -414 435 -312 329 -678 698 -739 747 l-38 30 123 119 c255 247 1042 1013 1528 1489 368 360 508 481 736 633 242 161 437 234 744 277 79 12 119 22 128 33 6 9 12 41 12 73 0 33 -5 61 -12 67 -14 11 -2499 9 -2517 -3 -17 -10 -14 -130 4 -145 8 -7 77 -20 152 -30 76 -10 168 -26 205 -35 188 -48 280 -180 234 -338 -29 -101 -129 -268 -247 -413 -246 -303 -1162 -1204 -1699 -1673 -135 -117 -294 -256 -353 -308 -60 -52 -111 -92 -114 -89 -3 3 -6 475 -7 1048 0 1235 5 1335 81 1496 80 170 305 278 653 312 84 8 118 16 128 28 13 17 16 120 4 140 -7 10 -286 13 -1360 15 -744 1 -1357 1 -1362 -1z" />
+      </g>
+    </svg>
+  );
+};
+
+export default KalonLogo;

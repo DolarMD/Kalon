@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix KALON — Catálogo Editorial \u0026 Streetwear DTF",
+  "description": "Catálogo editorial minimalista en blanco y negro para la marca KALON. Explora prendas premium con estampado DTF de alta definición y realiza pedidos directos por WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

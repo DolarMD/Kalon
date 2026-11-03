@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-editorial: 'Bodoni Moda', serif;
+    --font-classic: 'Cormorant Garamond', serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+}
+
+.font-editorial {
+  font-family: var(--font-editorial);
+  letter-spacing: 0.06em;
+}
+
+.font-classic {
+  font-family: var(--font-classic);
+  letter-spacing: 0.02em;
+}
